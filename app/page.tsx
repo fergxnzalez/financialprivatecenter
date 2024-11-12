@@ -4,7 +4,7 @@ export default function Home() {
   return (
         <section className="py-24">
           <div className="container">
-               <h1 className="text-3xl font-bold">Financial Center</h1>
+               <h1 className="text-3xl font-bold">Dashboard</h1>
            </div>
         </section>
     )
