@@ -1,20 +1,20 @@
 'use client'
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import casinoGame from '@/interfaces/casinoGame'
-import { CardActionArea, CardHeader, CardMedia } from '@mui/material'
+import { CardActionArea, CardMedia } from '@mui/material'
+import blockChainInvest from '@/interfaces/blockChainInvest'
+import Link from 'next/link'
 
-interface casinoGamesProps {
-  props: casinoGame;
+interface blockChainInvestProps {
+  props: blockChainInvest;
 }
 
-const CasinoGame: React.FC<casinoGamesProps> = ({ props }: casinoGamesProps) => {
+const CasinoGame: React.FC<blockChainInvestProps> = ({ props }: blockChainInvestProps) => {
   return (
+    <Link href={`/blockchain/${props.href}`}>
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
@@ -33,11 +33,10 @@ const CasinoGame: React.FC<casinoGamesProps> = ({ props }: casinoGamesProps) => 
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size='small' color='primary'>
-          Explore
-        </Button>
       </CardActions>
     </Card>
+    </Link>
+
   )
 }
 
